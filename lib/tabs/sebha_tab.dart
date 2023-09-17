@@ -2,15 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/my_theme_data.dart';
 
-class SebhaTab extends StatelessWidget {
-  const SebhaTab({super.key});
+class SebhaTab extends StatefulWidget {
+
+  @override
+  State<SebhaTab> createState() => _SebhaTabState();
+}
+
+class _SebhaTabState extends State<SebhaTab> {
+  int counter=0;
+  int tasbehCounter=0;
+  List<String> tasbeh =["سبحان الله","الحمدلله","استغفر الله","الله اكبر","لا اله الا الله"];
+
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         children: [
-          Image.asset("assets/images/sebha_body.png"),
+          InkWell(
+              onTap: (){
+                counter++;
+
+                if(counter==34){
+                  counter=1;
+                  tasbehCounter++;
+                }
+                if(tasbehCounter==5){
+                  tasbehCounter=0;
+                }
+                setState(() {
+
+                });
+              },
+              child: Image.asset("assets/images/sebha_body.png")),
           SizedBox(
             height: 20,
           ),
@@ -28,7 +52,7 @@ class SebhaTab extends StatelessWidget {
                 color: MyThemeData.primaryColor,
               ),
               child: Text(
-                "1",
+                "$counter",
                 style: TextStyle(color: MyThemeData.blackColor),
               )),
           SizedBox(
@@ -39,7 +63,7 @@ class SebhaTab extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: MyThemeData.primaryColor),
-            child: Text("سبحان الله",
+            child: Text(tasbeh[tasbehCounter],
                 style: Theme.of(context).textTheme.bodyMedium),
           )
         ],
