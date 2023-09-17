@@ -5,6 +5,7 @@ import 'package:islami_app/tabs/quran_tab.dart';
 import 'package:islami_app/tabs/radio_tab.dart';
 import 'package:islami_app/tabs/sebha_tab.dart';
 import 'package:islami_app/tabs/settings_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           appBar: AppBar(
             title: Text(
-              "Islami",
+              AppLocalizations.of(context)!.appTitle,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             centerTitle: true,
@@ -44,30 +45,30 @@ class _HomeScreenState extends State<HomeScreen> {
               items: [
                 BottomNavigationBarItem(
                   icon: const ImageIcon(AssetImage("assets/images/quran.png")),
-                  label: "Quran",
+                  label: AppLocalizations.of(context)!.quran,
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
                   icon: const ImageIcon(AssetImage("assets/images/sebha.png")),
-                  label: "Sebha",
+                  label: AppLocalizations.of(context)!.sebha,
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
                   icon: const ImageIcon(
                     AssetImage("assets/images/radio.png"),
                   ),
-                  label: "Radio",
+                  label: AppLocalizations.of(context)!.radio,
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
                   icon:
                       const ImageIcon(AssetImage("assets/images/ahadeth.png")),
-                  label: "Ahadeth",
+                  label: AppLocalizations.of(context)!.ahadeth,
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
                   icon: const Icon(Icons.settings),
-                  label: "Settings",
+                  label: AppLocalizations.of(context)!.settings,
                   backgroundColor: MyThemeData.primaryColor,
                 ),
               ]),
