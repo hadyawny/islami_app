@@ -10,14 +10,14 @@ class RadioTab extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("assets/images/radio_body.png"),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Text(
             "إذاعة القرآن الكريم",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Image.asset("assets/images/play_icons_radio.png"),

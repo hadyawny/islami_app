@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/my_theme_data.dart';
 import 'package:islami_app/tabs/ahadeth_tab.dart';
 import 'package:islami_app/tabs/quran_tab.dart';
@@ -9,6 +8,8 @@ import 'package:islami_app/tabs/settings_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
+
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -42,29 +43,30 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               items: [
                 BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/quran.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/quran.png")),
                   label: "Quran",
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/sebha.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/sebha.png")),
                   label: "Sebha",
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(
+                  icon: const ImageIcon(
                     AssetImage("assets/images/radio.png"),
                   ),
                   label: "Radio",
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/ahadeth.png")),
+                  icon:
+                      const ImageIcon(AssetImage("assets/images/ahadeth.png")),
                   label: "Ahadeth",
                   backgroundColor: MyThemeData.primaryColor,
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   label: "Settings",
                   backgroundColor: MyThemeData.primaryColor,
                 ),
@@ -74,5 +76,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
-  List<Widget> tabs=[QuranTab(),SebhaTab(),RadioTab(),AhadethTab(),SettingsTab()];
+
+  List<Widget> tabs = [
+    QuranTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const AhadethTab(),
+    const SettingsTab()
+  ];
 }

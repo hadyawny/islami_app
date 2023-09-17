@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/my_theme_data.dart';
 
 class SebhaTab extends StatefulWidget {
+  const SebhaTab({super.key});
 
   @override
   State<SebhaTab> createState() => _SebhaTabState();
@@ -35,18 +35,18 @@ class _SebhaTabState extends State<SebhaTab> {
                 });
               },
               child: Image.asset("assets/images/sebha_body.png")),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(
             "tasbeh count",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: MyThemeData.primaryColor,
@@ -55,11 +55,11 @@ class _SebhaTabState extends State<SebhaTab> {
                 "$counter",
                 style: TextStyle(color: MyThemeData.blackColor),
               )),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: MyThemeData.primaryColor),

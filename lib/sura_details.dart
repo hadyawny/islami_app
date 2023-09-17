@@ -6,6 +6,8 @@ import 'package:islami_app/sura_model.dart';
 class SuraDetails extends StatefulWidget {
   static const String routeName = "suraDetails";
 
+  const SuraDetails({super.key});
+
   @override
   State<SuraDetails> createState() => _SuraDetailsState();
 }
@@ -20,7 +22,7 @@ class _SuraDetailsState extends State<SuraDetails> {
       loadFile(args.index);
     }
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
             "assets/images/background.png",
