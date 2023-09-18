@@ -15,7 +15,10 @@ class _AhadethTabState extends State<AhadethTab> {
 
   @override
   Widget build(BuildContext context) {
-    loadHadeth();
+
+    if (allAhadeth.isEmpty){
+      loadHadeth();
+    }
 
     return Center(
       child: Column(
@@ -74,6 +77,7 @@ class _AhadethTabState extends State<AhadethTab> {
         List<String> content = hadethOneLines;
         HadethModel hadethModel = HadethModel(title, content);
         allAhadeth.add(hadethModel);
+        print(title);
         setState(() {
 
         });
