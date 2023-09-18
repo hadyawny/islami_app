@@ -77,7 +77,6 @@ class _AhadethTabState extends State<AhadethTab> {
         List<String> content = hadethOneLines;
         HadethModel hadethModel = HadethModel(title, content);
         allAhadeth.add(hadethModel);
-        print(title);
         setState(() {
 
         });
