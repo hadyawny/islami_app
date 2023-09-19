@@ -40,6 +40,18 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.1
+  flutter_native_splash: ^2.3.2
+
+flutter_native_splash:
+
+  color: "#E7E6E6"
+  image: assets/images/splash_logo.png
+
+  android_12:
+    image: assets/images/splash_logo.png
+
+    color: "#E7E6E6"
+
 
 dev_dependencies:
   flutter_test:
