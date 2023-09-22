@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/home.dart';
+import 'package:islami_app/providers/my_provider.dart';
 import 'package:islami_app/sura_details.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 import 'hadeth_details.dart';
 import 'my_theme_data.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( ChangeNotifierProvider(
+      create: (context) => MyProvider(),
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +20,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    var provider = Provider.of<MyProvider>(context);
+
     return MaterialApp(
 
       localizationsDelegates: [
@@ -24,7 +31,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale:Locale("en"),
+      locale:Locale(provider.locale),
       supportedLocales: [
         Locale('en'), // English
         Locale('ar'), // arabic
