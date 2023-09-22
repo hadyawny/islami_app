@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale:Locale("ar"),
+      locale:Locale("en"),
       supportedLocales: [
         Locale('en'), // English
         Locale('ar'), // arabic
@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
       },
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
+      themeMode: ThemeMode.light,
     );
   }
 }
