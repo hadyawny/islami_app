@@ -9,9 +9,8 @@ import 'hadeth_details.dart';
 import 'my_theme_data.dart';
 
 void main() {
-  runApp( ChangeNotifierProvider(
-      create: (context) => MyProvider(),
-      child: MyApp()));
+  runApp(ChangeNotifierProvider(
+      create: (context) => MyProvider(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,23 +19,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     var provider = Provider.of<MyProvider>(context);
 
     return MaterialApp(
-
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         AppLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale:Locale(provider.locale),
+      locale: Locale(provider.locale),
       supportedLocales: [
         Locale('en'), // English
         Locale('ar'), // arabic
       ],
-
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
       routes: {

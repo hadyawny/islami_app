@@ -2,26 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData {
-
   static Color primaryColor = const Color(0xffB7935F);
   static Color darkPrimaryColor = const Color(0xff141a2e);
   static Color blackColor = const Color(0xff242424);
   static Color yellowColor = const Color(0xfffacc1d);
 
-  static ThemeData lightTheme =ThemeData(
+  static ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
       colorScheme: ColorScheme(
-          brightness: Brightness.light,
-          primary: blackColor,
-          onPrimary: Colors.white,
-          secondary: primaryColor,
-          onSecondary: Colors.white,
-          error: Colors.red,
-          onError: Colors.white,
-          background: primaryColor,
-          onBackground: blackColor,
-          surface: primaryColor,
-          onSurface: Colors.white,
+        brightness: Brightness.light,
+        primary: blackColor,
+        onPrimary: Colors.white,
+        secondary: primaryColor,
+        onSecondary: Colors.white,
+        error: Colors.red,
+        onError: Colors.white,
+        background: primaryColor,
+        onBackground: blackColor,
+        surface: primaryColor,
+        onSurface: Colors.white,
       ),
       textTheme: TextTheme(
         bodySmall: GoogleFonts.elMessiri(
@@ -41,7 +40,7 @@ class MyThemeData {
         ),
       ),
       appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(color:primaryColor,size: 30),
+        iconTheme: IconThemeData(color: primaryColor, size: 30),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -51,10 +50,7 @@ class MyThemeData {
         selectedItemColor: blackColor,
         unselectedItemColor: Colors.white,
         backgroundColor: primaryColor,
-
-      )
-  );
-
+      ));
 
   static ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
@@ -89,7 +85,7 @@ class MyThemeData {
         ),
       ),
       appBarTheme: AppBarTheme(
-        iconTheme: IconThemeData(color:Colors.white,size: 30),
+        iconTheme: IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
@@ -99,8 +95,5 @@ class MyThemeData {
         selectedItemColor: yellowColor,
         unselectedItemColor: Colors.white,
         backgroundColor: darkPrimaryColor,
-
-      )
-  );
-
+      ));
 }

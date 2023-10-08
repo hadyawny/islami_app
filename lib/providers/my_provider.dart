@@ -11,7 +11,6 @@ class MyProvider extends ChangeNotifier {
 
   changeTheme(ThemeMode mode) {
     modeApp = mode;
-
     notifyListeners();
   }
 }

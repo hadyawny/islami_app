@@ -1,5 +1,4 @@
-class SuraModel{
-
+class SuraModel {
   String name;
   int index;
 

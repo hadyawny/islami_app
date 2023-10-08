@@ -10,10 +10,15 @@ class SebhaTab extends StatefulWidget {
 }
 
 class _SebhaTabState extends State<SebhaTab> {
-  int counter=0;
-  int tasbehCounter=0;
-  List<String> tasbeh =["سبحان الله","الحمدلله","استغفر الله","الله اكبر","لا اله الا الله"];
-
+  int counter = 0;
+  int tasbehCounter = 0;
+  List<String> tasbeh = [
+    "سبحان الله",
+    "الحمدلله",
+    "استغفر الله",
+    "الله اكبر",
+    "لا اله الا الله"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +26,17 @@ class _SebhaTabState extends State<SebhaTab> {
       child: Column(
         children: [
           InkWell(
-              onTap: (){
+              onTap: () {
                 counter++;
 
-                if(counter==34){
-                  counter=1;
+                if (counter == 34) {
+                  counter = 1;
                   tasbehCounter++;
                 }
-                if(tasbehCounter==5){
-                  tasbehCounter=0;
+                if (tasbehCounter == 5) {
+                  tasbehCounter = 0;
                 }
-                setState(() {
-
-                });
+                setState(() {});
               },
               child: Image.asset("assets/images/sebha_body.png")),
           const SizedBox(

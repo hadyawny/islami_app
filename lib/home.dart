@@ -23,12 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-    var pro= Provider.of<MyProvider>(context);
+    var pro = Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image.asset(
-          pro.modeApp== ThemeMode.light?"assets/images/background.png":"assets/images/background_dark.png",
+          pro.modeApp == ThemeMode.light
+              ? "assets/images/background.png"
+              : "assets/images/background_dark.png",
           width: double.infinity,
           fit: BoxFit.cover,
         ),
@@ -86,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
     QuranTab(),
     const SebhaTab(),
     const RadioTab(),
-     AhadethTab(),
+    AhadethTab(),
     const SettingsTab()
   ];
 }

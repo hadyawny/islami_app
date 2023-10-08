@@ -165,8 +165,7 @@ class QuranTab extends StatelessWidget {
                       child: Text(
                     suraNames[index],
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.primary
-                    ),
+                        color: Theme.of(context).colorScheme.primary),
                   )),
                 );
               },

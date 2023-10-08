@@ -26,22 +26,23 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
             onTap: () {
               provider.changeLanguage("en");
               Navigator.pop(context);
-
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   AppLocalizations.of(context)!.english,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: provider.locale=='en'? MyThemeData.primaryColor:MyThemeData.blackColor),
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: provider.locale == 'en'
+                          ? MyThemeData.primaryColor
+                          : MyThemeData.blackColor),
                 ),
-                provider.locale=='en'? Icon(
-                  Icons.check,
-                  color: MyThemeData.primaryColor,
-                ):SizedBox.shrink()
+                provider.locale == 'en'
+                    ? Icon(
+                        Icons.check,
+                        color: MyThemeData.primaryColor,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
@@ -55,17 +56,18 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
               children: [
                 Text(
                   AppLocalizations.of(context)!.arabic,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall?.copyWith(
-                    color: provider.locale=='ar'? MyThemeData.primaryColor:MyThemeData.blackColor,
-                  ),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: provider.locale == 'ar'
+                            ? MyThemeData.primaryColor
+                            : MyThemeData.blackColor,
+                      ),
                 ),
-                provider.locale=='ar'? Icon(
-                  Icons.check,
-                  color: MyThemeData.primaryColor,
-                ):SizedBox.shrink()
-
+                provider.locale == 'ar'
+                    ? Icon(
+                        Icons.check,
+                        color: MyThemeData.primaryColor,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
@@ -73,6 +75,4 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
       ),
     );
   }
-
-
 }

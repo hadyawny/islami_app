@@ -26,21 +26,23 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
             onTap: () {
               provider.changeTheme(ThemeMode.light);
               Navigator.pop(context);
-
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Light",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: provider.modeApp==ThemeMode.light? Theme.of(context).colorScheme.background:Colors.white),
+                Text(
+                  "Light",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: provider.modeApp == ThemeMode.light
+                          ? Theme.of(context).colorScheme.background
+                          : Colors.white),
                 ),
-                provider.modeApp==ThemeMode.light? Icon(
-                  Icons.check,
-                  color: MyThemeData.primaryColor,
-                ):SizedBox.shrink()
+                provider.modeApp == ThemeMode.light
+                    ? Icon(
+                        Icons.check,
+                        color: MyThemeData.primaryColor,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
@@ -52,16 +54,19 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Dark",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!.copyWith(color: provider.modeApp==ThemeMode.dark? Theme.of(context).colorScheme.background:Colors.black),
+                Text(
+                  "Dark",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: provider.modeApp == ThemeMode.dark
+                          ? Theme.of(context).colorScheme.background
+                          : Colors.black),
                 ),
-                provider.modeApp==ThemeMode.dark? Icon(
-                  Icons.check,
-                  color: MyThemeData.primaryColor,
-                ):SizedBox.shrink()
-
+                provider.modeApp == ThemeMode.dark
+                    ? Icon(
+                        Icons.check,
+                        color: MyThemeData.primaryColor,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
@@ -69,6 +74,4 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
       ),
     );
   }
-
-
 }

@@ -37,7 +37,6 @@ class _SettingsTabState extends State<SettingsTab> {
             child: Container(
                 padding: EdgeInsets.all(12),
                 width: double.infinity,
-
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: Colors.transparent,
@@ -68,7 +67,9 @@ class _SettingsTabState extends State<SettingsTab> {
                     border:
                         Border.all(color: MyThemeData.primaryColor, width: 1)),
                 child: Text(
-                  provider.locale == 'en' ? AppLocalizations.of(context)!.english : AppLocalizations.of(context)!.arabic,
+                  provider.locale == 'en'
+                      ? AppLocalizations.of(context)!.english
+                      : AppLocalizations.of(context)!.arabic,
                   style: Theme.of(context).textTheme.bodySmall,
                 )),
           ),
