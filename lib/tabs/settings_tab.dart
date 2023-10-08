@@ -37,9 +37,10 @@ class _SettingsTabState extends State<SettingsTab> {
             child: Container(
                 padding: EdgeInsets.all(12),
                 width: double.infinity,
+
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
+                    color: Colors.transparent,
                     border:
                         Border.all(color: MyThemeData.primaryColor, width: 1)),
                 child: Text(
@@ -63,7 +64,7 @@ class _SettingsTabState extends State<SettingsTab> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white,
+                    color: Colors.transparent,
                     border:
                         Border.all(color: MyThemeData.primaryColor, width: 1)),
                 child: Text(

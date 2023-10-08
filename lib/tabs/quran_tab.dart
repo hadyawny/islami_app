@@ -138,7 +138,7 @@ class QuranTab extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium!
-                .copyWith(color: MyThemeData.blackColor),
+                .copyWith(color: Theme.of(context).colorScheme.primary),
           ),
           Divider(
             color: MyThemeData.primaryColor,
@@ -164,7 +164,9 @@ class QuranTab extends StatelessWidget {
                   child: Center(
                       child: Text(
                     suraNames[index],
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Theme.of(context).colorScheme.primary
+                    ),
                   )),
                 );
               },

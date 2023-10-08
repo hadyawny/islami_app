@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       },
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: provider.modeApp,
     );
   }
 }
